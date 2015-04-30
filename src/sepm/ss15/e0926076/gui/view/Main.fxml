@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sepm.ss15.e0926076.gui.controller.Main">
+   <children>
+      <TabPane fx:id="tab_pane" maxHeight="600.0" maxWidth="800.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="tab_horse" closable="false" text="Horses">
+               <content>
+                  <fx:include source="HorseView.fxml" />
+               </content>
+          </Tab>
+          <Tab fx:id="tab_jockey" closable="false" text="Jockeys">
+               <content>
+                  <fx:include source="JockeyView.fxml" />
+               </content>
+          </Tab>
+            <Tab fx:id="tab_races" text="Races">
+               <content>
+                  <fx:include source="RaceView.fxml" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

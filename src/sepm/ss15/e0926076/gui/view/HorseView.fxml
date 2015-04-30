@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sepm.ss15.e0926076.gui.controller.HorseViewController">
+   <children>
+      <SplitPane dividerPositions="0.75" orientation="VERTICAL" prefHeight="390.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="horse_table" prefHeight="237.0" prefWidth="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="col_ID" prefWidth="118.0" text="ID" />
+                      <TableColumn fx:id="col_name" prefWidth="200.0" text="NAME" />
+                        <TableColumn fx:id="col_min_speed" prefWidth="228.0" text="MIN-SPEED" />
+                        <TableColumn fx:id="col_max_speed" prefWidth="75.0" text="MAX-SPEED" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem fx:id="context_edit_horse" mnemonicParsing="false" onAction="#contextEditHorse" text="Edit" />
+                              <MenuItem fx:id="context_add_to_simu_horse" mnemonicParsing="false" onAction="#contextToRace" text="Add to Race" />
+                              <MenuItem mnemonicParsing="false" onAction="#contextShowStatistic" text="Show Statistic" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem fx:id="context_del_horse" mnemonicParsing="false" onAction="#contextDeleteHorse" text="Delete" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="25.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button fx:id="btn_new_horse" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#newHorseClicked" prefHeight="30.0" prefWidth="100.0" text="New...">
+                           <HBox.margin>
+                              <Insets left="7.5" right="7.5" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn_list_horses" mnemonicParsing="false" onAction="#listHorsesClicked" prefHeight="30.0" prefWidth="100.0" text="List...">
+                           <HBox.margin>
+                              <Insets left="7.5" right="7.5" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn_edit_horse" mnemonicParsing="false" onAction="#editHorseClicked" prefHeight="30.0" prefWidth="100.0" text="Edit...">
+                           <HBox.margin>
+                              <Insets left="7.5" right="7.5" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn_horse_statistics" mnemonicParsing="false" onAction="#horseStatisticsClicked" prefHeight="30.0" prefWidth="100.0" text="Show Statistic">
+                           <HBox.margin>
+                              <Insets left="7.5" right="7.5" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn_delete_horse" mnemonicParsing="false" onAction="#deleteHorseClicked" prefHeight="30.0" prefWidth="100.0" text="Delete">
+                           <HBox.margin>
+                              <Insets left="30.0" right="7.5" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

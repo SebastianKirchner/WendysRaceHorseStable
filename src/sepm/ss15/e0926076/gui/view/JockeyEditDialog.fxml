@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="281.0" prefWidth="237.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sepm.ss15.e0926076.gui.controller.JockeyEditDialogController">
+   <children>
+      <GridPane layoutX="217.0" layoutY="102.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="46.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="161.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="122.0" text="Name" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="187.0" text="Height" GridPane.rowIndex="4" />
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="120.0" text="Skill" GridPane.rowIndex="5" />
+            <TextField fx:id="field_jockey_name" promptText="3-20 Characters" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="field_height" promptText="between 50 and 250 cm" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="field_skill" promptText="can be any number" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin></TextField>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="121.0" text="Sex" GridPane.rowIndex="2" />
+            <RadioButton fx:id="radio_male" mnemonicParsing="false" prefHeight="17.0" prefWidth="121.0" text="male" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="group_gender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radio_female" mnemonicParsing="false" text="female" toggleGroup="$group_gender" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="50.0" text="ID" />
+            <Label fx:id="label_id" text="- is set automatically -" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <HBox alignment="CENTER" layoutX="301.0" layoutY="356.0" prefHeight="30.0" prefWidth="405.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="btn_dialog_OK" mnemonicParsing="false" onAction="#confirmDialogClicked" prefHeight="30.0" prefWidth="100.0" text="OK">
+               <HBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btn_cancel_dialog" mnemonicParsing="false" onAction="#cancelDialogClicked" prefHeight="30.0" prefWidth="100.0" text="Cancel">
+               <HBox.margin>
+                  <Insets left="15.0" right="15.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

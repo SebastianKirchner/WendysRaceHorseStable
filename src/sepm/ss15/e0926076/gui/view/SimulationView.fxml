@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sepm.ss15.e0926076.gui.controller.SimulationViewController">
+   <children>
+      <SplitPane dividerPositions="0.8288590604026845" orientation="VERTICAL" prefHeight="390.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="183.0" prefWidth="418.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <SplitPane dividerPositions="0.49528301886792453" prefHeight="288.0" prefWidth="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <TableView fx:id="horse_table" prefHeight="237.0" prefWidth="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                                <TableColumn prefWidth="75.0" text="HORSE">
+                                                   <columns>
+                                                    <TableColumn fx:id="col_h_id" prefWidth="50.0" text="id" />
+                                                    <TableColumn fx:id="col_h_min_speed" prefWidth="50.0" text="min-speed" />
+                                                      <TableColumn fx:id="col_h_max_speed" prefWidth="50.0" text="max-speed" />
+                                                   </columns>
+                                                </TableColumn>
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                             <contextMenu>
+                                                <ContextMenu>
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" onAction="#contextDeleteHorse" text="Delete" />
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <TableView fx:id="jockey_table" prefHeight="286.0" prefWidth="318.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="JOCKEY">
+                                                   <columns>
+                                                      <TableColumn fx:id="col_j_id" prefWidth="50.0" text="id" />
+                                                      <TableColumn fx:id="col_j_skill" prefWidth="50.0" text="skill" />
+                                                      <TableColumn fx:id="col_j_height" prefWidth="50.0" text="height" />
+                                                   </columns>
+                                                </TableColumn>
+                                             </columns>
+                                             <contextMenu>
+                                                <ContextMenu>
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" onAction="#contextDeleteJockey" text="Delete" />
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView fx:id="team_table" prefHeight="87.0" prefWidth="416.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn minWidth="219.0" prefWidth="250.0" text="TEAM">
+                                       <columns>
+                                          <TableColumn fx:id="col_team_horse" prefWidth="75.0" text="horse-id" />
+                                          <TableColumn fx:id="col_team_jockey" prefWidth="75.0" text="jockey-id" />
+                                       </columns>
+                                    </TableColumn>
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="94.0" prefWidth="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button fx:id="btn_sim_team" mnemonicParsing="false" onAction="#teamUpClicked" prefHeight="30.0" prefWidth="100.0" text="Team Up">
+                           <HBox.margin>
+                              <Insets left="7.5" right="7.5" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn_sim_start" mnemonicParsing="false" onAction="#startSimulationStarted" prefHeight="30.0" prefWidth="100.0" text="Simulate">
+                           <HBox.margin>
+                              <Insets left="7.5" right="7.5" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn_delete" mnemonicParsing="false" onAction="#deleteTeamClicked" prefHeight="30.0" prefWidth="100.0" text="Delete Team">
+                           <HBox.margin>
+                              <Insets left="30.0" right="7.5" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
